@@ -24,7 +24,7 @@ namespace Tyuiu.ShtolAA.Sprint5.Task1.V28.Lib
             }
 
             double y;
-            string strY;
+            string str;
             for (int x = startValue; x <= stopValue; x++)
             {
                 y = Math.Round(((Math.Cos(x)/(x-0.7))-(Math.Sin(x)*12*x)+2), 2);
@@ -32,14 +32,14 @@ namespace Tyuiu.ShtolAA.Sprint5.Task1.V28.Lib
                 {
                     y = 0;
                 }
-                strY = Convert.ToString(y);
+                str = Convert.ToString(y);
                 if (x != stopValue)
                 {
-                    File.AppendAllText(path, strY + Environment.NewLine);
+                    File.AppendAllText(path, str + Environment.NewLine);
                 }
                 else
                 {
-                    File.AppendAllText(path, strY);
+                    File.AppendAllText(path, str);
                 }
             }
             return path;
